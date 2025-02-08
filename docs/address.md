@@ -2,7 +2,7 @@
 
 ## Create Address API 
 
-Enpoint : POST /api/contact/:contactId/address
+Endpoint : POST /api/contact/:contactId/address
 
 Headers :
 - Authorization : token
@@ -45,7 +45,7 @@ Response Body Error:
 
 ## Update Address API 
 
-Enpoint : PUT /api/:contactId/contact/:addressId
+Endpoint : PUT /api/:contactId/contact/:addressId
 
 Headers :
 - Authorization : token
@@ -82,13 +82,13 @@ Response Body Error:
 
 ```json
 {
-    "errors" : "country is requiered" 
+    "errors" : "country is required" 
 }
 ```
 
 ## Get Address API
 
-Enpoint : GET /api/contact/:contactId/:addressId
+Endpoint : GET /api/contact/:contactId/:addressId
 
 Headers :
 - Authorization : token
@@ -114,13 +114,13 @@ Response Body Error:
 
 ```json
 {
-    "errors" : "Contact is not founf" 
+    "errors" : "Contact is not found" 
 }
 ```
 
 ## List Address API
 
-Enpoint : GET /api/contact/:contactId/address
+Endpoint : GET /api/contact/:contactId/address
 
 Headers :
 - Authorization : token
@@ -136,10 +136,8 @@ Response Body Success:
     "citi" : "kota apa",
     "province" : "Provinsi apa",
     "country" : "Negara apa",
-    "postal-code" : "Kode pos" 
-}
-    ],
-    
+    "postal-code" : "Kode pos"
+      },
 {
     "id" : 1,
     "street" : "Jalan apa", 
@@ -148,6 +146,7 @@ Response Body Success:
     "country" : "Negara apa",
     "postal-code" : "Kode pos" 
 }
+      ]
 }
 ```
 
@@ -161,7 +160,7 @@ Response Body Error:
 
 ## Remove Address API
 
-Enpoint : POST /api/contact/:id/address
+Endpoint : POST /api/contact/:id/address
 
 Headers :
 - Authorization : token 

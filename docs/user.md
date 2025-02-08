@@ -13,21 +13,23 @@ Endpoint : POST /api/users
  ```
  Response Body Success: 
  ```json
+{
  "data" : {
- {"username" : "arcrezzy",
+  "username" : "arcrezzy",
   "Name" : "haykal"
   }
  }
  ```
 Response Body Error:
 ```json
-{
-    "errors" : "Username already registered"
-}
-
-{
-    "errors" : "Invalid Username Format, Username must not contain special characters."
-}
+[
+    {
+        "errors" : "Username already registered"
+    },
+    {
+        "errors" : "Invalid Username Format, Username must not contain special characters."
+    }
+]
 ```
 
 
@@ -43,7 +45,7 @@ Request Body:
 } 
 ```
 
-Response Body Succes: 
+Response Body Success: 
 
 ```json
 {
@@ -68,8 +70,8 @@ Headers :
 Request Body: 
 ```json
 {
-    "name" : "arcrezzy", //optional
-    "password" : "new password" //optional
+    "name" : "arcrezzy", 
+    "password" : "new password" 
 }
 ```
 Response Body Success: 

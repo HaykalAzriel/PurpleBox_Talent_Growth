@@ -16,7 +16,7 @@ Request Body:
     "phone" : "1234567"
 }
 ```
-Response Body Succes: 
+Response Body Success: 
 ```json
 {
     "data": {
@@ -54,7 +54,7 @@ Request Body:
 }
 ```
 
-Response Body Succes: 
+Response Body Success: 
 
 ```json
 {
@@ -82,7 +82,7 @@ Endpoint : GET /api/contacts/:id
 Headers : 
 - Authorization : token
  
-Response Body Succes: 
+Response Body Success: 
 
 ```json
 {
@@ -101,7 +101,7 @@ Response Body Errors:
 
 ```json
 {
-    "error" : "Contact is not found"
+    "errors" : "Contact is not found"
 }
 ```
 
@@ -112,14 +112,14 @@ Endpoint : GET /api/contacts
 Headers : 
 - Authorization : token
 
-Querry params: 
+Query params: 
 - name : Search by first_name or last_name, using like, optional 
 - email : Search by email using like, optional 
 - phone : Search by phone using like, optional 
-- page : number of page, defaut 1
+- page : number of page, default 1
 - size : size per page, default 10  
 
-Response Body Succes: 
+Response Body Success: 
 ```json
 {
  "data" : [
@@ -138,11 +138,12 @@ Response Body Succes:
     "phone" : "1234567"
 }
  ],
- "paging" : [
-    "page" : 1, 
-    "total_page" : 3, 
-    "total _item" : 30
- ]
+  
+ "paging" : {
+  "page": 1,
+  "total_page": 3,
+  "total_item": 30
+}
 
 }
 ```
@@ -155,7 +156,7 @@ Endpoint : DELETE /api/contacts/:id
 Headers : 
 - Authorization : token
 
-Response Body Succes: 
+Response Body Success: 
 
 ```json
 {
@@ -167,6 +168,6 @@ Response Body Errors:
 
 ```json
 {
-    "error" : "contact is not found" 
+    "errors" : "contact is not found" 
 }
 ```
